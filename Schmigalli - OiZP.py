@@ -5,10 +5,10 @@ import random
 
 # przykładowa tabela z detalami i ich kolejnością operacji
 details = {
-    "detail1": {"packages": 220, "operations": "cbabdgihjf"},
-    "detail2": {"packages": 120, "operations": "cabagdhijh"},
+    "detail1": {"packages": 100, "operations": "cbabdgihjf"},
+    "detail2": {"packages": 100, "operations": "cabagdhijh"},
     "detail3": {"packages": 100, "operations": "acfbigfc"},
-    "detail4": {"packages": 400, "operations": "cacbdgjhj"},
+    "detail4": {"packages": 100, "operations": "cacbdgjhj"},
 }
 
 # wyznaczanie rozmiaru macierzy powiązań
@@ -39,7 +39,8 @@ m = 10
 n = 10
 G = nx.triangular_lattice_graph(m, n)
 
-order_list = ["H", "J", "I", "G", "D", "B", "A", "C", "F", "E"]
+# policzona ręcznie
+order_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
 pos = nx.get_node_attributes(G, 'pos')
 
